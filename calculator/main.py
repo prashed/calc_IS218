@@ -29,8 +29,8 @@ class Calculator:
 # Program make a simple calculator
 
 # This function adds two numbers
-def add(xvalue, yvalue):
-    return xvalue + yvalue
+def add(x, y):
+    return x + y
 
 
 # This function subtracts two numbers
