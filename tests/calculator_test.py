@@ -1,32 +1,52 @@
 """Testing the Calculator"""
+import pytest
 from calculator.main import Calculator
 
 
 def test_calculator_result():
-    """testing calculator result is 0"""
+    """ Testing result=0 """
     calc = Calculator()
     assert calc.result == 0
 
 
-def test_calculator_add():
-    """Testing the Add function of the calculator"""
-    # Arrange by instantiating the calc class
+def test_calculator_get_result():
+    """ Testing get result """
     calc = Calculator()
-    # Act by calling the method to be tested
+
+    assert calc.get_result() == 0
+
+
+def test_calculator_add():
+    """ Testing addition operation """
+    calc = Calculator()
     calc.add_number(1)
-    # Assert that the results are correct
     assert calc.result == 1
 
 
-def test_calculator_get_result():
-    """Testing the Get result method of the calculator"""
-    calc = Calculator()
-    calc.add_number(1)
-    assert calc.get_result() == 1
-
-
 def test_calculator_subtract():
-    """Testing the subtract method of the calculator"""
+    """ Testing subtraction operation """
     calc = Calculator()
     calc.subtract_number(1)
     assert calc.get_result() == -1
+
+
+def test_calculator_multiply():
+    """ Testing multiplication operation """
+    calc = Calculator()
+    calc.multiply_number(1)
+    assert calc.get_result() == 0
+
+
+def test_calculator_divide():
+    """ Testing division operation """
+    calc = Calculator()
+    calc.divide_number(1)
+    assert calc.get_result() == 0
+
+
+def test_calculator_divide_by_zero():
+    """ Testing division by zero exception"""
+    with pytest.raises(ZeroDivisionError):
+        calc = Calculator()
+        calc.add_number(10)
+        calc.divide_number(0)
