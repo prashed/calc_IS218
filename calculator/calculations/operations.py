@@ -2,7 +2,7 @@
 from calculator.calculations.calculation import Calculation
 
 
-class Addition(Calculation):
+class Addition(Calculation):  # pylint: disable=too-few-public-methods
     """ calculating the sum of all numbers """
 
     def get_result(self):
@@ -13,7 +13,7 @@ class Addition(Calculation):
         return total
 
 
-class Subtraction(Calculation):
+class Subtraction(Calculation):  # pylint: disable=too-few-public-methods
     """ save the first result and subtract the other numbers """
 
     def get_result(self):
@@ -25,7 +25,7 @@ class Subtraction(Calculation):
         return total
 
 
-class Multiplication(Calculation):
+class Multiplication(Calculation):  # pylint: disable=too-few-public-methods
     """ save the first result and multiply the other numbers """
 
     def get_result(self):
@@ -38,7 +38,7 @@ class Multiplication(Calculation):
         return total
 
 
-class Division(Calculation):
+class Division(Calculation):  # pylint: disable=too-few-public-methods
     """ save the first result and divide the other numbers """
 
     def get_result(self):
