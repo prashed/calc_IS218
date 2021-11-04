@@ -1,40 +1,69 @@
-""" This is the Calculator object """
+"""" This is the Calculator object """
+from calculator.calculations.operations import Addition, Subtraction, Multiplication, Division
 
 
 class Calculator:
-    """ This is the Calculator class"""
+    """ Calculator class"""
 
-    def __init__(self, starting_result=0):
-        self.result = starting_result
+    history = []
 
-    def get_result(self):
-        """ Get Result of Calculation"""
-        return self.result
+    @staticmethod
+    def add_number(*values):
+        """ add to the result """
+        total = Addition(*values)
 
-    def add_number(self, *value):
-        """ Add to the result"""
-        for values in value:
-            self.result += values
+        Calculator.history.append(total)
 
-        return self.result
+        return total.get_result()
 
-    def subtract_number(self, *value):
-        """ Subtract from the result """
-        for values in value:
-            self.result -= values
+    @staticmethod
+    def subtract_number(*values):
+        """ subtract from result """
+        total = Subtraction(*values)
 
-        return self.result
+        Calculator.history.append(total)
 
-    def multiply_number(self, *value):
-        """ Multiply by the result """
-        for values in value:
-            self.result *= values
+        return total.get_result()
 
-        return self.result
+    @staticmethod
+    def multiply_number(*values):
+        """ multiply by a number """
+        total = Multiplication(*values)
 
-    def divide_number(self, *value):
-        """ Divide by the result """
-        for values in value:
-            self.result /= values
+        Calculator.history.append(total)
 
-        return self.result
+        return total.get_result()
+
+    @staticmethod
+    def divide_number(*values):
+        """ divide by a number """
+        total = Division(*values)
+
+        Calculator.history.append(total)
+
+        return total.get_result()
+
+    @staticmethod
+    def get_first_calculation():
+        """ the first calc in calc history """
+        return Calculator.history[0]
+
+    @staticmethod
+    def get_last_calculation():
+        """ most recent calc in calc history """
+        return Calculator.history[-1]
+
+    @staticmethod
+    def get_num_of_calculations():
+        """ return total calcs in calc history """
+        return len(Calculator.history)
+
+    @staticmethod
+    def clear_history():
+        """ clear calcs in calc history """
+        Calculator.history = []
+
+    @staticmethod
+    def remove_from_history(index):
+        """ clear calc in index of calc history """
+        Calculator.history.pop(index)
