@@ -25,11 +25,11 @@ def test_add_and_get_last_calculation():
     """ last calc in calc history test """
     calc = Calculator()
 
-    calc.add_number(3, 4)
+    calc.add_number(2, 2)
     calc.add_number(5, 5)
     calculation = calc.get_last_calculation()
 
-    assert calculation.get_result() != 7
+    assert calculation.get_result() != 4
     assert calculation.get_result() == 10
 
 
@@ -47,7 +47,7 @@ def test_remove_calculation_from_history():
     calc.remove_from_history(2)
     calculation = calc.get_last_calculation()
 
-    assert calculation.get_result() == 7
+    assert calculation.get_result() == 4
 
 
 def test_number_of_calculations_in_history_after_clearing():
@@ -63,33 +63,33 @@ def test_calculator_subtract():
     """ Subtraction test """
     calc = Calculator()
 
-    calc.subtract_number(10, 8)
+    calc.subtract_number(10, 5)
 
     calculation = calc.get_last_calculation()
 
-    assert calculation.get_result() == 2
+    assert calculation.get_result() == 5
 
 
 def test_calculator_multiply():
     """ Multiplication test """
     calc = Calculator()
 
-    calc.multiply_number(2, 3, 2)
+    calc.multiply_number(1, 3, 5)
 
     calculation = calc.get_last_calculation()
 
-    assert calculation.get_result() == 12
+    assert calculation.get_result() == 15
 
 
 def test_calculator_divide():
     """ Division test """
     calc = Calculator()
 
-    calc.divide_number(20, 2)
+    calc.divide_number(10, 2)
 
     calculation = calc.get_last_calculation()
 
-    assert calculation.get_result() == 10
+    assert calculation.get_result() == 5
 
 
 def test_calculator_divide_by_zero():
@@ -97,4 +97,4 @@ def test_calculator_divide_by_zero():
 
     with pytest.raises(ZeroDivisionError):
         calc = Calculator()
-        calc.divide_number(10, 0)
+        calc.divide_number(12, 0)
