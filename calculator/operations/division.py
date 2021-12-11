@@ -3,14 +3,13 @@ from calculator.operations.calculation import Calculation
 
 
 class Division(Calculation):  # pylint: disable=too-few-public-methods
-    """Division Class"""
+    """Class for division methods"""
 
     def get_result(self):
-        """Get the quotient"""
-        try:
-            quotient = self.values[0]
-            for value in self.values[1:]:
-                quotient /= value
-            return quotient
-        except ZeroDivisionError:
-            return None
+        """Get result of division"""
+        quotient = self.values[0]
+        for value in self.values[1:]:
+            quotient /= value
+            # if value == 0:
+            #    raise ZeroDivisionError("Can't divide by 0")
+        return quotient

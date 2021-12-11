@@ -1,39 +1,39 @@
-""" Testing calculator operations"""
+""" Calculator test"""
 import pytest
 from calculator.calculator import Calculator
 
 
 def test_calculator_add():
-    """Addition test"""
-    my_tuple = (1, 2)
-    Calculator.add_numbers(my_tuple)
-    assert Calculator.get_last_result_value() == 3
+    """Testing the Add function of the calc"""
+    my_tuple = (1, 1)
+    Calculator.addition(my_tuple)
+    assert Calculator.get_last_result_value() == 2
 
 
 def test_calculator_subtract():
-    """Subtraction test"""
-    my_tuple = (10, 2)
-    Calculator.subtract_numbers(my_tuple)
-    assert Calculator.get_last_result_value() == 8
+    """Testing the subtract method of the calc"""
+    my_tuple = (1, 2)
+    Calculator.subtraction(my_tuple)
+    assert Calculator.get_last_result_value() == -1
 
 
 def test_calculator_multiply():
-    """Multiplication test"""
-    my_tuple = (5, 5)
-    Calculator.multiply_numbers(my_tuple)
-    assert Calculator.get_last_result_value() == 25
+    """Testing the multiply method of the calc"""
+    my_tuple = (4, 2)
+    Calculator.multiplication(my_tuple)
+    assert Calculator.get_last_result_value() == 8
 
 
 def test_calculator_divide():
-    """Division test"""
-    my_tuple = (10, 2)
-    Calculator.divide_numbers(my_tuple)
-    assert Calculator.get_last_result_value() == 5
+    """Testing the divide method of the calc"""
+    my_tuple = (12, 3)
+    Calculator.division(my_tuple)
+    assert Calculator.get_last_result_value() == 4
 
 
 def test_calculator_divide_zero():
-    """Exception for division by zero test"""
-    my_tuple = (10, 0)
-    Calculator.divide_numbers(my_tuple)
+    """Testing the divide method of calc for zero exception"""
+    my_tuple = (2, 0)
+    Calculator.division(my_tuple)
     with pytest.raises(ZeroDivisionError):
         Calculator.get_last_result_value()
