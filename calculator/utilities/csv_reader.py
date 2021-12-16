@@ -2,7 +2,8 @@
 import pandas as pd
 import calculator.utilities.absolute_path as ap
 
-class CsvReader: # pylint: disable=pointless-string-statement,consider-using-enumerate,line-too-long,unused-variable,
+
+class CsvReader:  # pylint: disable=pointless-string-statement,consider-using-enumerate,line-too-long,unused-variable,
     # too-few-public-methods
     """Class for reading csv's"""
 

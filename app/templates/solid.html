@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+
+<div class="scrollToTop-btn">
+    <i class="fas fa-angle-up"></i>
+</div>
+
+<header>
+    <a href="#" class="brand">Project 2</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+        <a href="index.html">Pylint & AAA</a>
+        <a href="oop.html">OOP</a>
+        <a href="solid.html">SOLID</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="github.html">Github Basics</a>
+        <a href="azure.html">Azure & Docker</a>
+        <a href="commands.html">Commands</a>
+    </div>
+</header>
+
+<!-- Topics START -->
+
+<section class="main" id="home">
+    <div class="content">
+        <div class="animated-text">
+            <h3>SOLID</h3>
+            <h3>Object Oriented Design</h3>
+        </div>
+    </div>
+</section>
+
+<!-- Topic 1 - SOLID -->
+<section class="about" id="github">
+    <div class="title reveal">
+        <h2 class="section-title">SOLID</h2>
+    </div>
+    <div class="content">
+        <div class="column col-left reveal">
+            <h1 style="margin-bottom: 20px">Single Responsibility</h1>
+            <p style="font-size: x-large; margin-left: 50px">To do math operations.</p>
+        </div>
+    </div>
+
+    <div>
+        <div class="content">
+            <div class="column col-left reveal">
+                <h1 style="margin-bottom: 20px">Open Closed</h1>
+                <p style="font-size: x-large; margin-left: 50px">When a math operation is done, add it to the history.</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="content">
+            <div class="column col-left reveal">
+                <h1 style="margin-bottom: 20px">Liskov Substitution</h1>
+                <p style="font-size: x-large; margin-left: 50px">Every Math operation class is built from
+                    the Operation class which holds the numbers to be calculated </p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="content">
+            <div class="column col-left reveal">
+                <h1 style="margin-bottom: 20px">Interface Segregation</h1>
+                <p style="font-size: x-large; margin-left: 50px">We don’t want to import classes that aren’t needed.
+                    For example, we don’t want to import the Operation class, just the classes that are built
+                    from it: Addition, Subtraction, Multiplication, and Division.</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="content">
+            <div class="column col-left reveal">
+                <h1 style="margin-bottom: 20px">Dependency Inversion</h1>
+                <p style="font-size: x-large; margin-left: 50px">Write logic in a way that is scalable so that when circumstances
+                    or environments are different, the logic of the program will still work. </p>
+
+                <p style="font-size: x-large; margin-left: 100px; margin-top: 50px">Create a python package whose name is "tests"</p>
+                <div class="column col-left reveal">
+                    <div class="img-card">
+                        <img src="images/solid-1.png" alt="solid-1">
+                    </div>
+                </div>
+
+                <p style="font-size: x-large; margin-left: 100px">Then in terminal at the root of your project directory</p>
+
+                <p style="font-size: x-large; margin-left: 100px">Then create a python file within that folder with a prefix
+                    or suffix of “test_” or “_test</p>
+                <div class="column col-left reveal">
+                    <div class="img-card">
+                        <img src="images/solid-2.png" alt="solid-2">
+                    </div>
+                </div>
+
+                <p style="font-size: x-large; margin-left: 100px">Within the python file, create functions with a prefix
+                    or suffix of “test_” or “_test” </p>
+                <div class="column col-left reveal">
+                    <div class="img-card">
+                        <img src="images/solid-3.png" alt="solid-3">
+                    </div>
+                </div>
+
+                <p style="font-size: x-large; margin-left: 100px">When the program is run using the “pylint” command in
+                    terminal, pylint will look through the tests package and look for any functions with the “test”
+                    prefix or suffix and run those functions.</p>
+                <div class="column col-left reveal">
+                    <div class="img-card">
+                        <img src="images/solid-4.png" alt="solid-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+    <!-- Topics END -->
+
+    <footer class="footer">
+        <span class="footer-title">Peter Rashed and Waqas Pathan</span>
+        <p>Copyright @2021 <a href="#">Githup Repo</a>. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../static/scripts/script.js" charset="utf-8"></script>
+
+</body>
+</html>

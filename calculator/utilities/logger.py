@@ -1,13 +1,14 @@
 """Utility script for logging csv operation results"""
 from datetime import datetime
-#import pytest
+# import pytest
 import calculator.utilities.file_name as fn
 from calculator.utilities.file_writer import FileWriter
 from calculator.utilities.csv_reader import CsvReader
-#from calculator.utilities.exception_logger import ExceptionLogger
+# from calculator.utilities.exception_logger import ExceptionLogger
 from calculator.calculator import Calculator
 
-class Logger: # pylint: disable=unused-variable,line-too-long,pointless-string-statement
+
+class Logger:  # pylint: disable=unused-variable,line-too-long,pointless-string-statement
     """Class for parsing and logging results from csv files"""
 
     @staticmethod
@@ -22,7 +23,7 @@ class Logger: # pylint: disable=unused-variable,line-too-long,pointless-string-s
             output_dict['result'].append(nums)
             output_dict['time'].append(str(datetime.utcnow().timestamp()))
             output_dict['filename'].append(fn.get_file_name(read_path))
-            output_dict['recordNumber'].append(index+1)
+            output_dict['recordNumber'].append(index + 1)
         return output_dict
 
     @staticmethod

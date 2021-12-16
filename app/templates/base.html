@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block head %}
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+        <link rel="stylesheet" href="../static/css/style.css"/>
         <title>{% block title %}{% endblock %} - My Webpage</title>
     {% endblock %}
     <!-- Bootstrap CSS -->
@@ -49,9 +49,7 @@
         crossorigin="anonymous"></script>
 
 <div id="footer">
-    {% block footer %}
-        &copy; Copyright 2021 by <a href="#">Keith Williams</a>.
-    {% endblock %}
+        &copy; Copyright 2021 by <a href="#">Peter Rashed</a>.
 </div>
 </body>
 </html>
